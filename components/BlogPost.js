@@ -1,9 +1,11 @@
-import { HeadPost } from './HeadPost'
+import ArticleHeader from './ArticleHeader'
+import AboutMeSidebar from './AboutMeSidebar'
 
 export default function BlogPost({ children, meta}) {
   return (
     <>
-      <HeadPost meta={meta} isBlogPost />
+      <ArticleHeader meta={meta} isBlogPost />
+      <AboutMeSidebar />
       <article>{children}</article>
     </>
   )

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "./Header";
+import NavBar from "./NavBar";
 
 export default function Layout({ children, pageTitle, description }) {
   return (
@@ -39,12 +39,12 @@ export default function Layout({ children, pageTitle, description }) {
         }
         .content {
           max-width: 600px;
-          margin: 2rem auto;
+          margin: 6rem auto;
           padding: 0 1rem;
         }
       `}</style>
       <main>
-        <Header />
+        <NavBar />
         <div className="content">{children}</div>
       </main>
     </>

@@ -1,17 +1,8 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function NavBar() {
   return (
-    <nav>
-      <h1>Next'Blog</h1>
-      <div>
-        <Link href="/">
-          <a>Blog</a>
-        </Link>
-        <Link href="/">
-          <a>About</a>
-        </Link>
-      </div>
+    <>
       <style jsx>{`
         nav {
           background: #444;
@@ -21,6 +12,10 @@ export default function Header() {
           justify-content: space-between;
           align-items: center;
           font-size: 1rem;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          right: 0px;
         }
         nav a {
           margin-right: 1rem;
@@ -30,6 +25,14 @@ export default function Header() {
           text-decoration: underline;
         }
       `}</style>
+    <nav>
+      <h1><Link href="/"><a>The Feral Nerd</a></Link></h1>
+      <div>
+        <Link href="/">
+          <a>About</a>
+        </Link>
+      </div>
     </nav>
+    </>
   );
 }
